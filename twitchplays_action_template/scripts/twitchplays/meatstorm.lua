@@ -73,8 +73,8 @@ end
 return
 {
     name = "!meatstorm",
-    atlas = "images/icons/tw_icon_frogstorm.xml",
-    icon = "images/icons/tw_icon_frogstorm.tex",
+    atlas = "images/icons/tw_icon_frog.xml",
+    icon = "images/icons/tw_icon_frog.tex",
     fn = fn,
     runtime = RUNTIME,
 }

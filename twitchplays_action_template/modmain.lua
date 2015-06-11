@@ -1,7 +1,7 @@
 Assets =
 {
-    Asset("IMAGE", "images/icons/tw_icon_meatstorm.tex"),
-    Asset("ATLAS", "images/icons/tw_icon_meatstorm.xml")
+    Asset("IMAGE", "images/icons/tw_icon_frogstorm.tex"),
+    Asset("ATLAS", "images/icons/tw_icon_frogstorm.xml")
 }
 
 local function AddCommand(name)

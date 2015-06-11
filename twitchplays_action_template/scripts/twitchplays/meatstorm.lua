@@ -3,7 +3,7 @@
 
 local easing = require("easing")
 
-local runtime = 10
+local RUNTIME = 10
 
 local function RandomizeSpawnDirection(count)
     return math.random() * 2 * PI

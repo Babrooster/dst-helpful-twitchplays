@@ -1,7 +1,7 @@
-name = "Twitch Plays Together - Action Template"
-description = "Add-on actions for Twitch Plays Together"
-author = ""
-version = "0.0.0"
+name = "Twitch Plays Together - Helpful Events"
+description = "Add-on actions for Twitch Plays Together - MeatStorm"
+author = "Babrooster"
+version = "0.0.1"
 
 forumthread = ""
 

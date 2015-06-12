@@ -51,8 +51,8 @@ local x, y, z = player.Transform:GetWorldPosition()
         end)
 
     if resultoffset ~= nil then
-        local datmeat = SpawnPrefab("smallmeat")
-        -- datmeat.persists = false
+        local datmeat = SpawnPrefab("meatball")
+        datmeat.persists = false
         datmeat.Transform:SetRotation(math.random(360))
         datmeat.sg:GoToState("fall")
         datmeat.Physics:Teleport(x + resultoffset.x, 35, z + resultoffset.z)
@@ -73,8 +73,8 @@ end
 return
 {
     name = "!meatstorm",
-    atlas = "images/icons/tw_icon_frog.xml",
-    icon = "images/icons/tw_icon_frog.tex",
+    atlas = "images/icons/meatball_icon.xml",
+    icon = "images/icons/meatball_icon.tex",
     fn = fn,
     runtime = RUNTIME,
 }

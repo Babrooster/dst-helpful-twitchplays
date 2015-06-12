@@ -1,12 +1,13 @@
 <?xml version="1.0"?>
 <Prefabs>
-	<Defs>
-		<Prefab name="meatball" pathname="common/inventory/meatball" file=".mod\dst-helpful-twitchplays\scripts\prefabs\meatball.lua" desc="">
-		<Assets>
-			<Asset type="IMAGE" file="mods/dst-helpful-twitchplays/images/inventoryimages/meatballs.tex" flags="0"/>
-		</Assets>
-	</Defs>
-	<Files>
-		<File name="prefabs/meatball.lua"/>
-	</Files>
+  <Defs>
+    <Prefab name="meatball" pathname="common/inventory/meatball" file=".mods\dst-helpful-twitchplays\scripts\prefabs\meatball.lua" desc="">
+    	<Assets>
+    		<Asset type="IMAGE" file="mods/dst-helpful-twitchplays/images/meatball.tex" flags="0"/>
+    	</Assets>
+    </Prefab>
+    </Defs>
+    <Files>
+    	<File name="prefabs/meatball.lua"/>
+    </Files>
 </Prefabs>

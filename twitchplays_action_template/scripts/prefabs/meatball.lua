@@ -1,5 +1,5 @@
 local assets = { 
-	Asset("ATLAS", "images/item/meatball.xml"),
+	Asset("ATLAS", "images/items/meatball.xml"),
 }
 
 local prefabs =
@@ -27,6 +27,7 @@ local function fn(Sim)
     
     inst:AddComponent("edible") -- can be eaten
     inst.components.edible.foodtype = FOODTYPE.MEAT
+    inst.components.edible.ismeat = true
     inst.components.edible.healthvalue = TUNING.HEALING.MED 
     inst.components.edible.hungervalue = TUNING.CALORIES_MED
 	

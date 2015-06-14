@@ -1,6 +1,11 @@
+
 local action = GLOBAL.Action
 local handler = GLOBAL.ActionHandler
 local strings = GLOBAL.STRINGS
+
+PrefabFiles = {
+	"meatball",
+}
 
 Assets =
 {
@@ -8,18 +13,8 @@ Assets =
     Asset("ATLAS", "images/icons/meatball_icon.xml"),
 }
 
-PrefabFiles = {
-	"meatball",
-}
-
-	-- people saying the things
-	strings.NAMES.MEATBALL = "Meatball"
-	strings.CHARACTERS.GENERIC.DESCRIBE.MEATBALL = "It's a ball of meat!"
-	-- strings.CHARACTERS.WENDY.DESCRIBE.MEATBALL = "What type of meat is this?"
-	--strings.CHARACTERS.TOVATH.DESCRIBE.MEATBALL = "Meat from the sky?"
-	--strings.CHARACTERS.FELICIA.DESCRIBE.MEATBALL = "Put it in my mouth!"
-	--strings.CHARACTERS.RYON.DESCRIBE.MEATBALL = "Who told you you could BALL with MEAT??"
-
+function gamepostinit()
+end
 
 local function AddCommand(name)
 	if GLOBAL.rawget( GLOBAL, "TwitchPlays" ) ~= nil then
@@ -31,3 +26,6 @@ local function AddCommand(name)
 end
 
 AddCommand("meatstorm")
+
+--add a post init to the game starting up
+AddGamePostInit(gamepostinit)

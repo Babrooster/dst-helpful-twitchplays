@@ -1,7 +1,10 @@
 require "tuning"
 
-local assets = { 
-	Asset("IMAGE", "images/inventoryimages/meatball.tex"),
+local Assets =
+{
+	Asset("ANIM", "anim/meatball.zip"),
+	Asset("ANIM", "anim/swap_meatball.zip"),
+    Asset("ATLAS", "images/inventoryimages/meatball.xml"),
 }
 
 local prefabs =
@@ -18,11 +21,16 @@ local function fn(Sim)
 	local inst = CreateEntity()
 	inst.entity:AddTransform()
 	inst.entity:AddAnimState()
+	inst.entity:AddNetwork()
     MakeInventoryPhysics(inst)
     
     inst.AnimState:SetBank("meatball")
     inst.AnimState:SetBuild("meatball")
     inst.AnimState:PlayAnimation("idle")
+    
+    if not TheWorld.ismastersim then
+        return inst
+    end
     
     inst:AddTag("food")
     inst:AddTag("meat")
@@ -49,10 +57,9 @@ local function fn(Sim)
     inst:AddComponent("inspectable")
     
     inst:AddComponent("inventoryitem")
-	--inst.components.inventoryitem.imagename = "images/inventoryimages/meatball.tex"
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/meatball.xml"
 	
     return inst
 end
- 
-return Prefab( "common/inventory/meatball", fn, assets)
+
+return Prefab( "common/inventory/meatball", fn, Assets)

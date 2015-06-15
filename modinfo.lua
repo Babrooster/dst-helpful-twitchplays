@@ -1,7 +1,7 @@
 name = "Meatstorm"
 description = "Add-on actions for Twitch Plays Together - Meatstorm"
 author = "Babrooster"
-version = "0.0.1"
+version = "1.0.0"
 
 forumthread = ""
 

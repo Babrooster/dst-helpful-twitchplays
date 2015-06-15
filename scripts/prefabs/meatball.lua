@@ -3,7 +3,6 @@ require "tuning"
 local Assets =
 {
 	Asset("ANIM", "anim/meatball.zip"),
-	Asset("ANIM", "anim/swap_meatball.zip"),
     Asset("ATLAS", "images/inventoryimages/meatball.xml"),
 }
 

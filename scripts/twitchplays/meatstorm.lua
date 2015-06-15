@@ -1,5 +1,4 @@
--- meatstorm is a modified version of frograin from the Twitch Plays Together mod by KleiFish
--- ... it's just meats 8^D
+-- Meatstorm is a (barely) modified version of frograin from the Twitch Plays Together mod by KleiFish
 
 local easing = require("easing")
 
@@ -35,7 +34,7 @@ end
 local function SpawnMeat(player, runtime_end, count)
 local x, y, z = player.Transform:GetWorldPosition()
     if player.sg:HasStateTag("moving") then
-        --Lead the player's position if he's moving
+        --Lead the player's position if she's moving
         local speed = player.components.locomotor:GetRunSpeed()
         local lead = speed * easing.outQuad(math.min(4, count), .75, .5, 4)
         local theta = player.Transform:GetRotation() * DEGREES
@@ -54,15 +53,13 @@ local x, y, z = player.Transform:GetWorldPosition()
         local datmeat = SpawnPrefab("meatball")
         datmeat.persists = false
         datmeat.Transform:SetRotation(math.random(360))
-        datmeat.sg:GoToState("fall")
         datmeat.Physics:Teleport(x + resultoffset.x, 35, z + resultoffset.z)
         count = count + 1
-        -- frog:ListenForEvent("entitysleep", OnSleep)
     end
 
     if GetTime() < runtime_end then
         local delay = resultoffset ~= nil and RandomizeSpawnDelay(count) or math.random(2) * FRAMES
-        player:DoTaskInTime(delay, SpawnMeat, runtime_end, count, death_rate)
+        player:DoTaskInTime(delay, SpawnMeat, runtime_end, count, 9)
     end
 end
 

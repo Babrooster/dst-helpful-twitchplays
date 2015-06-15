@@ -35,6 +35,8 @@ local function fn(Sim)
     inst:AddTag("food")
     inst:AddTag("meat")
 	
+	inst:AddComponent("inspectable")
+	
     inst:AddComponent("edible") -- can be eaten
     inst.components.edible.foodtype = FOODTYPE.MEAT
     inst.components.edible.ismeat = true
@@ -54,12 +56,17 @@ local function fn(Sim)
 	inst.components.perishable.onperishreplacement = "spoiled_food"
 	inst.components.perishable:StartPerishing()
     
-    inst:AddComponent("inspectable")
-    
     inst:AddComponent("inventoryitem")
 	inst.components.inventoryitem.atlasname = "images/inventoryimages/meatball.xml"
 	
     return inst
 end
+
+STRINGS.NAMES.MEATBALL= "Meatball"
+STRINGS.CHARACTERS.GENERIC.DESCRIBE.MEATBALL = "It's a ball of meat!"
+STRINGS.CHARACTERS.WENDY.DESCRIBE.MEATBALL = "What type of meat is this?"
+--strings.CHARACTERS.TOVATH.DESCRIBE.MEATBALL = "Meat from the sky?"
+STRINGS.CHARACTERS.FELICIA.DESCRIBE.MEATBALL = "A meatball!? Put it in my mouth!"
+STRINGS.CHARACTERS.RYON.DESCRIBE.MEATBALL = "You want to know what it takes to not starve? It takes MEAT BALLS to not starve."
 
 return Prefab( "common/inventory/meatball", fn, Assets)

@@ -74,7 +74,7 @@ return
 {
     name = "!meatstorm",
     atlas = "images/icons/meatball_icon.xml",
-    icon = "images/icons/meatball_icon.tex",
+    icon = "meatball_icon.tex",
     fn = fn,
     runtime = RUNTIME,
 }

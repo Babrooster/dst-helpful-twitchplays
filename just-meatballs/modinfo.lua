@@ -1,4 +1,4 @@
-name = "Meatstorm"
+name = "Meatstorm: Just the meats
 description = "Add-on actions for Twitch Plays Together - Meatstorm. note: THIS MOD REQUIRES FELICIA AND RYON CHARACTERS BY STEAM USER TOVATH."
 author = "Babrooster"
 version = "0.0.1"

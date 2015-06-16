@@ -1,7 +1,7 @@
 name = "Meatstorm"
 description = "Add-on actions for Twitch Plays Together - Meatstorm"
 author = "Babrooster"
-version = "1.0.0"
+version = "1.0.1"
 
 forumthread = ""
 
@@ -17,12 +17,15 @@ server_filter_tags = {"twitchplays"}
 
 local vote_options =
 {
-    { description = "On", data = 0 },
+    { description = "Always on", data = 0 },
 }
-for i = 1, 5 do
-    vote_options[#vote_options + 1] = { description = ""..i..(i > 1 and " votes" or " vote"), data = i }
+for i = 10, 90, 10 do
+    vote_options[#vote_options + 1] = { description = ""..i.." votes", data = i }
 end
-for i = 10, 100, 5 do
+for i = 100, 280, 20 do
+    vote_options[#vote_options + 1] = { description = ""..i.." votes", data = i }
+end
+for i = 300, 500, 50 do
     vote_options[#vote_options + 1] = { description = ""..i.." votes", data = i }
 end
 
@@ -32,8 +35,11 @@ local cooldown_options =
 {
     { description = "Instant", data = 0 },
 }
-for i = 10, 300, 10 do
-    cooldown_options[#cooldown_options + 1] = { description = ""..i.." seconds", data = i }
+for i = 12, 24, 12 do
+	cooldown_options[#cooldown_options + 1] = { description = ""..(i % 24 == 0 and (i/24).." day" or i.." hours"), data = i*20 }
+end
+for i = 36, 120, 12 do
+    cooldown_options[#cooldown_options + 1] = { description = ""..(i % 24 == 0 and (i/24).." days" or i.." hours"), data = i*20 }
 end
 
 --------------------------------------------------------------------------

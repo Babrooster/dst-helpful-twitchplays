@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <spriter_data scml_version="1.0" generator="BrashMonkey Spriter" generator_version="r4.1">
     <folder id="0" name="meatball">
-        <file id="0" name="meatball/meatball.png" width="86" height="68" pivot_x="0" pivot_y="1"/>
+        <file id="0" name="meatball/meatball.png" width="60" height="48" pivot_x="0" pivot_y="1"/>
     </folder>
     <entity id="0" name="meatball">
         <animation id="0" name="idle" length="1000" interval="100">
@@ -12,7 +12,7 @@
             </mainline>
             <timeline id="0" name="meatball">
                 <key id="0" spin="0">
-                    <object folder="0" file="0" x="-41" y="64"/>
+                    <object folder="0" file="0" x="-30" y="44"/>
                 </key>
             </timeline>
         </animation>

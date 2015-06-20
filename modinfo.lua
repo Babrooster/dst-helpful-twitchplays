@@ -7,6 +7,9 @@ forumthread = ""
 
 api_version = 10
 
+icon_atlas = "mod_icon.xml"
+icon = "mod_icon.tex"
+
 all_clients_require_mod = true
 client_only_mod = false
 dst_compatible = true
@@ -17,7 +20,7 @@ server_filter_tags = {"twitchplays"}
 
 local vote_options =
 {
-    { description = "Always on", data = 0 },
+	{ description = "1 vote", data = 1 },
 }
 for i = 10, 90, 10 do
     vote_options[#vote_options + 1] = { description = ""..i.." votes", data = i }
